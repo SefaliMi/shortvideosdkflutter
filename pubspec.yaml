@@ -1,6 +1,6 @@
 name: swirl_shortvideosdk
 description: "Short Video Sdk."
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/SefaliMi/shortvideosdkflutter.git
 
 environment:  
