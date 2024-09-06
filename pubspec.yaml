@@ -1,15 +1,16 @@
 name: swirl_shortvideosdk
 description: "Short Video Sdk."
 version: 0.0.1
-homepage:
+homepage: https://github.com/SefaliMi/shortvideosdkflutter.git
 
-environment:
+environment:  
   sdk: '>=3.2.6 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
+  video_player: ^2.9.1
 
 dev_dependencies:
   flutter_test:

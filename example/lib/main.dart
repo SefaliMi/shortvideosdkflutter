@@ -36,9 +36,9 @@ class _MyHomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('plugin Example'),
+        title: const Text('ShortVideo Sdk'),
       ),
-      body: BoxImages(),
+      body: AutoplayVideoList(),
     );
   }
 }
