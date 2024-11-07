@@ -1,11 +1,9 @@
-library swirl_shortvideosdk;
-
 import 'package:flutter/material.dart';
 import 'package:swirl_shortvideosdk/constants/colors.dart';
-import 'package:swirl_shortvideosdk/model/product.dart';
-import 'package:swirl_shortvideosdk/model/videoData.dart';
 import 'package:swirl_shortvideosdk/screens/fullscreen_video.dart';
 import 'package:swirl_shortvideosdk/widgets/bottom_product_widget.dart';
+import 'package:swirl_shortvideosdk/model/product.dart';
+import 'package:swirl_shortvideosdk/model/videoData.dart';
 import 'package:video_player/video_player.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import 'dart:math';
@@ -166,6 +164,15 @@ class _AutoplayVideoListState extends State<AutoplayVideoList> {
     }
   }
 
+  // void _playVideo(int index) {
+  //   for (int i = 0; i < _videos.length; i++) {
+  //     if (i == index) {
+  //       _videos[i].controller.play();
+  //     } else {
+  //       _videos[i].controller.pause();
+  //     }
+  //   }
+  // }
   void _playVideo(int index) {
     // Stop any other videos that are currently playing
     for (int i = 0; i < _videos.length; i++) {
@@ -211,7 +218,6 @@ class _AutoplayVideoListState extends State<AutoplayVideoList> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Padding(
           padding:
@@ -263,6 +269,13 @@ class _AutoplayVideoListState extends State<AutoplayVideoList> {
                                     height: 276,
                                     child: VideoPlayer(video.controller)),
 
+                                // AspectRatio(
+                                //   aspectRatio:
+                                //       video.controller.value.isInitialized
+                                //           ? video.controller.value.aspectRatio
+                                //           : 16 / 9,
+                                //   child: VideoPlayer(video.controller),
+                                // ),
                                 Positioned(
                                   top: 0,
                                   left: 0,
